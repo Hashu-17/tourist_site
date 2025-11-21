@@ -1,0 +1,144 @@
+
+#root {
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+body::before {
+  content: none;
+}
+
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -3;
+  pointer-events: none;
+  transform: scale(1.28);
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: rgba(20, 20, 20, 0.7); /* dark overlay */
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.iot-card {
+  background: rgba(17, 17, 17, 0.7);
+  color: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+  padding: 2.2rem 1.5rem;
+  min-height: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s;
+}
+
+.iot-row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.2rem;
+}
+
+.iot-icon {
+  font-size: 2.5rem;
+  flex: 0 0 auto;
+  margin-right: 1rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.iot-data-block {
+  flex: 1 1 auto;
+  text-align: right;
+}
+.iot-card:hover {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+}
+.iot-card h2 {
+  margin-top: 0;
+  margin-bottom: 0.1rem;
+  color: #fff;
+  text-align: left;
+  font-size: 2.8rem;
+  font-weight: 800;
+  width: 100%;
+}
+.iot-value {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0.5rem 0 0.2rem 0;
+  text-align: right;
+}
+.iot-desc {
+  color: #cbd5e1;
+  font-size: 1rem;
+  text-align: right;
+}
+
+.read-the-docs {
+  color: #888;
+}
