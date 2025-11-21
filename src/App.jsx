@@ -72,25 +72,24 @@ function App() {
 
   return (
     <div className="container">
-        <h1>OAK HALL</h1>
-        <div className="card-grid">
-          {iotData.map((data) => {
-            const Icon = data.icon;
-            return (
-              <div className="iot-card" key={data.id}>
-                <h2>{data.title}</h2>
-                <div className="iot-row">
-                  <span className="iot-icon"><Icon size={64} /></span>
-                  <div className="iot-data-block">
-                    <p className="iot-value">{data.value}</p>
-                  </div>
+      <h1>OAK HALL</h1>
+      <div className="card-grid">
+        {iotData.map((data) => {
+          const Icon = data.icon;
+          return (
+            <div className="iot-card" key={data.id}>
+              <h2>{data.title}</h2>
+              <div className="iot-row">
+                <span className="iot-icon"><Icon size={64} /></span>
+                <div className="iot-data-block">
+                  <p className="iot-value">{data.value}</p>
                 </div>
               </div>
-            );
-          })}
-        </div>
+            </div>
+          );
+        })}
       </div>
-    </>
+    </div>
   );
 }
 
