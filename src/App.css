@@ -13,19 +13,14 @@ body {
 
 
 body::before {
-  content: none;
-}
-
-.background-video {
+  content: "";
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  object-fit: cover;
-  z-index: -3;
-  pointer-events: none;
-  transform: scale(1.28);
+  z-index: -2;
+  background: url('/oak.jpg') left 30% center/cover no-repeat;
 }
 
 body::after {

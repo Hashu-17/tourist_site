@@ -71,16 +71,7 @@ function App() {
   ];
 
   return (
-    <>
-      <video
-        className="background-video"
-        src="/oak.mp4"
-        autoPlay
-        loop
-        muted
-        playsInline
-      />
-      <div className="container">
+    <div className="container">
         <h1>OAK HALL</h1>
         <div className="card-grid">
           {iotData.map((data) => {
