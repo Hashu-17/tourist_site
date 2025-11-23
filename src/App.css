@@ -12,15 +12,21 @@ body {
 }
 
 
+
 body::before {
-  content: "";
+  content: none;
+}
+
+.background-video {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: -2;
-  background: url('/oak.jpg') left 30% center/cover no-repeat;
+  object-fit: cover;
+  z-index: -3;
+  pointer-events: none;
+  transform: scale(1.28);
 }
 
 body::after {
@@ -68,6 +74,35 @@ body::after {
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+}
+
+.header-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.oak-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.datetime {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 0.3rem;
+  text-align: right;
+  min-width: 180px;
+}
+
+.datetime .time-bold {
+  font-weight: 700;
 }
 
 .card-grid {
