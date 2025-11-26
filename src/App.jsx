@@ -80,9 +80,10 @@ function App() {
     return () => unsub();
   }, []);
 
+  // Show temperature 10 degrees less than received
   const formattedTemp =
     temperature !== '--' && temperature !== undefined && temperature !== null
-      ? `${temperature}°C`
+      ? `${Number(temperature) - 10}°C`
       : '--';
 
   const formattedHumidity =
